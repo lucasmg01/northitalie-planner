@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostFlow - Générateur de posts LinkedIn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="badge">AI COPY STUDIO</p>
+        <h1>PostFlow</h1>
+        <p class="subtitle">
+          Génère des posts LinkedIn originaux, humains et orientés impact, inspirés des structures qui performent chez les meilleurs marketers.
+        </p>
+      </header>
+
+      <section class="panel input-panel">
+        <h2>Paramètres</h2>
+        <form id="generatorForm">
+          <label>
+            Sujet principal
+            <input id="topic" type="text" placeholder="Ex: Lancer une offre premium sans audience énorme" required />
+          </label>
+
+          <label>
+            Audience cible
+            <input id="audience" type="text" placeholder="Ex: Freelances B2B, fondateurs SaaS, CMO" required />
+          </label>
+
+          <label>
+            Objectif
+            <select id="goal">
+              <option value="awareness">Notoriété</option>
+              <option value="engagement">Engagement</option>
+              <option value="leadgen">Générer des leads</option>
+              <option value="authority">Autorité</option>
+            </select>
+          </label>
+
+          <label>
+            Ton
+            <select id="tone">
+              <option value="direct">Direct</option>
+              <option value="story">Storytelling</option>
+              <option value="provoc">Provocateur intelligent</option>
+              <option value="pedago">Pédagogique</option>
+            </select>
+          </label>
+
+          <label>
+            Niveau d'énergie
+            <input id="energy" type="range" min="1" max="5" value="3" />
+          </label>
+
+          <label>
+            Appel à l'action
+            <input id="cta" type="text" placeholder="Ex: Écris 'PLAN' en commentaire" />
+          </label>
+
+          <label class="checkbox">
+            <input id="withEmoji" type="checkbox" checked />
+            Ajouter quelques emojis
+          </label>
+
+          <button type="submit" class="btn-generate">Générer 3 variantes</button>
+        </form>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="output-head">
+          <h2>Résultats</h2>
+          <button id="regenerate" class="btn-secondary" type="button">Régénérer</button>
+        </div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <template id="postTemplate">
+      <article class="post-card">
+        <div class="post-top">
+          <span class="post-label"></span>
+          <button class="btn-copy" type="button">Copier</button>
+        </div>
+        <pre class="post-content"></pre>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
