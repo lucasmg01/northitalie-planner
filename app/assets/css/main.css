@@ -16,3 +16,9 @@
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
 }
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}

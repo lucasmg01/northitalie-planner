@@ -41,7 +41,7 @@ const formatEuro = (value: number) => {
 <template>
   <main class="min-h-screen bg-gradient-to-b from-amber-50 via-white to-cyan-50 text-slate-900">
     <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <section class="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-100 to-emerald-100 p-8">
+      <section class="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-100 to-emerald-100 p-8 shadow-sm">
         <p class="text-sm uppercase tracking-[0.2em] text-cyan-700">
           Micro-SaaS Nuxt 4
         </p>
@@ -67,7 +67,7 @@ const formatEuro = (value: number) => {
                 type="number"
                 min="3"
                 max="14"
-                class="rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none ring-cyan-300 transition focus:ring-2"
+                class="rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-xs outline-none ring-cyan-300 transition focus:ring-2"
               >
             </label>
 
@@ -79,7 +79,7 @@ const formatEuro = (value: number) => {
                 min="60"
                 max="400"
                 step="5"
-                class="rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none ring-cyan-300 transition focus:ring-2"
+                class="rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-xs outline-none ring-cyan-300 transition focus:ring-2"
               >
             </label>
 
@@ -87,7 +87,7 @@ const formatEuro = (value: number) => {
               <span class="text-sm text-slate-600">Focus</span>
               <select
                 v-model="trip.focus"
-                class="rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none ring-cyan-300 transition focus:ring-2"
+                class="rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-xs outline-none ring-cyan-300 transition focus:ring-2"
               >
                 <option v-for="option in focusOptions" :key="option.value" :value="option.value">
                   {{ option.label }}
@@ -99,7 +99,7 @@ const formatEuro = (value: number) => {
               <span class="text-sm text-slate-600">Rythme</span>
               <select
                 v-model="trip.pace"
-                class="rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none ring-cyan-300 transition focus:ring-2"
+                class="rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-xs outline-none ring-cyan-300 transition focus:ring-2"
               >
                 <option v-for="option in paceOptions" :key="option.value" :value="option.value">
                   {{ option.label }}
@@ -111,7 +111,7 @@ const formatEuro = (value: number) => {
               <span class="text-sm text-slate-600">Mode budget</span>
               <select
                 v-model="trip.mode"
-                class="rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none ring-cyan-300 transition focus:ring-2"
+                class="rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-xs outline-none ring-cyan-300 transition focus:ring-2"
               >
                 <option v-for="option in modeOptions" :key="option.value" :value="option.value">
                   {{ option.label }}
@@ -146,7 +146,7 @@ const formatEuro = (value: number) => {
               <p class="text-xs uppercase tracking-wide text-slate-500">
                 Economie
               </p>
-              <p class="mt-1 text-lg font-semibold text-emerald-300">
+              <p class="mt-1 text-lg font-semibold text-emerald-700">
                 {{ formatEuro(result.savings) }}
               </p>
             </div>
@@ -154,7 +154,7 @@ const formatEuro = (value: number) => {
               <p class="text-xs uppercase tracking-wide text-slate-500">
                 Score beautE
               </p>
-              <p class="mt-1 text-lg font-semibold text-cyan-300">
+              <p class="mt-1 text-lg font-semibold text-cyan-700">
                 {{ result.score }}/100
               </p>
             </div>
